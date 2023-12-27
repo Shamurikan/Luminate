@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+	--body-color: #18191a;
+	--section-color: #242526;
+	--progress-bar-color: #303030;
+	--primary-color-light: #3a3b3c;
+	--toggle-color: #fff;
+	--primary-text-color: #ccc;
+	--text-color: #707070;
+	--p-color: #695CFE;
+	/* [primary color](#ACF220), [font color](#E1E6D6), [body background](#000000) */
+	--primary-color: #ACF220;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: var(--primary-text-color);
+	background-image: url('background.svg');
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+#dashboard h1 {
+	mix-blend-mode: difference;
+	color: var(--primary-color);
+	font-family: 'Pacifico', cursive;
+	font-size: 45px;
+}
+
+article {
+	background: #242526;
+	border-radius: 4px;
+	margin: 4%;
+	padding: 4%;
+}
+
+article h1 {
+	background: var(--primary-color);
+	color: white;
+	padding: 6% 2% 2% 2%;
+	border-radius: 4px;
+}
+
+article button {
+	background: #E2FF65;
+	color: black;
+	padding: 2% 20px;
+	border-radius: 4px;
+	margin: auto 0%;
+}
+
+input {
+	all: unset;
+	background-color: var(--body-color);
+	padding: 2%;
+	border-radius: 8px;
+}
+
+#outputs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.outputs {
+	background-color: #18191a;
+}
+
+.content-section {
+	background-color: var(--section-color);
+	padding: 6%;
+	margin: 3%;
+	border-radius: 12px;
+}
+
+.content-share-icon {
+	width: 18px;
+	transform: translateY(6px);
+}
+
+.content-stages {
+	color: var(--text-color);
+}
+
+.content-progress-bar {
+	height: 25px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.content-progress-bar div {
+	background-color: var(--body-color);
+	color: var(--body-color);
+	transition: 0.4s;
+	flex-grow: 1;
+	text-align: center;
+	margin: 0px 2px;
+	border-radius: 4px;
+}
+
+.content-progress-bar div.isDone {
+	background-color: var(--primary-color);
+	color: var(--primary-color) !important;
+	margin: 0px 2px;
+	border-radius: 4px;
+}
+
+#finish-button {
+	background-color: var(--section-color);
+	font-weight: bolder;
+	text-align: center;
+	border-radius: 12px;
+	padding: 4%;
+	margin: 20% 3%;
+	color: black;
+}
