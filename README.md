@@ -1,5 +1,5 @@
 ## Introduction
-[`Velocraze`](https://shamurikan.github.io/Velocraze/) is an outstanding website dedicated to fitness, combining technological innovation and appealing design to provide a unique experience for fitness enthusiasts. The site features a user-friendly interface that facilitates navigation and access to various services and exercises.
+[`Velocraze`](https://shamurikan.github.io/Luminate) is an outstanding website dedicated to fitness, combining technological innovation and appealing design to provide a unique experience for fitness enthusiasts. The site features a user-friendly interface that facilitates navigation and access to various services and exercises.
 
 [`Velocraze`](https://shamurikan.github.io/Velocraze/) offers a wide range of diverse workouts, allowing users to choose programs that suit their individual levels and personal goals. Subscribers can benefit from strength training, amateurs, and general fitness workouts, with the option to customize exercise plans based on their specific needs.
 
