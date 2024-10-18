@@ -1,22 +1,44 @@
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open('v1').then((cache) => {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/styles.css',
-        '/script.js',
-        '/icon-192x192.png',
-        '/icon-512x512.png'
-      ]);
+const dataCacheName = 'pwa-test-data';
+const cacheName = 'pwa-test';
+const filesToCache = [
+  '/',
+  '/index.html',
+  '/icon.png',
+];
+
+//install the sw
+self.addEventListener('install', function (e) {
+  console.log('[ServiceWorker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function (cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
     })
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+
+self.addEventListener('activate', function (e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      return Promise.all(keyList.map(function (key) {
+        if (key !== cacheName && key !== dataCacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
+
+
+self.addEventListener('fetch', function (e) {
+  console.log('[Service Worker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function (response) {
+      return response || fetch(e.request);
     })
   );
 });
