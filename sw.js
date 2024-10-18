@@ -1,9 +1,9 @@
-const dataCacheName = 'pwa-test-data';
-const cacheName = 'pwa-test';
+const dataCacheName = 'Luminate';
+const cacheName = 'Luminate';
 const filesToCache = [
   '/',
   '/index.html',
-  '/icon.png',
+  '/icon-512x512.png',
 ];
 
 //install the sw
